@@ -80,7 +80,10 @@ elif score >= 3:
 else:
     grade = "F"
 
-print("Your grade is:", grade)
+if score > 5:
+  print("Invalid Score")
+else:
+  print("Your grade is:", grade)
 
 """4. Write a Python program that checks if a number is even or odd."""
 
@@ -103,13 +106,11 @@ Change the code so that there are two inputs and the first number it can be divi
 numberOne = int(input("Enter first number: "))
 numberTwo = int(input("Enter second number: "))
 
-# Check if the number is even or odd
 if numberOne % numberTwo == 0:
     result = "divisible"
 else:
     result = "not divisible"
 
-# Print the result
 print("The number is", result)
 
 """5. Variable types"""
@@ -158,13 +159,11 @@ side1 = float(input("Enter the length of side 1: "))
 side2 = float(input("Enter the length of side 2: "))
 side3 = float(input("Enter the length of side 3: "))
 
-# Check the type of triangle
 if ((side1 + side2) >= side3)and((side2 + side3) >= side1)and((side1 + side3) >= side2):
     triangle_check = "can be drawn"
 else:
     triangle_check = "can not be drawn"
 
-# Print the type of triangle
 print("The triangle", triangle_check)
 
 """7. Write a Python program that performs arithmetic operations on two numbers."""
@@ -186,7 +185,7 @@ elif operation == "/":
 else:
     result = "Invalid operation"
 
-# Print the result
+
 print("Result:", result)
 
 """Exercise 7. <br />
@@ -205,13 +204,16 @@ elif operation == "*":
     result = num1 * num2
 elif operation == "/":
     if num2==0:
-      print("2nd number is 0! Invalid operation")
+      print("Dividing when 2nd number is 0! Invalid operation")
     else:
       result = num1 / num2
 else:
     result = "Invalid operation"
 
-if operation == "/"and num2!=0:
+if operation == "/":
+  if num2!=0:
+    print("Result:", result)
+else:
   print("Result:", result)
 
 """Exercise 8. <br />
